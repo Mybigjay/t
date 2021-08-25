@@ -1,0 +1,46 @@
+<MyGrid>
+    name: sname
+    email: email
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        pos: 10, 10
+
+        GridLayout:
+            cols:2
+
+
+            Label:
+                text:"Name: "
+
+            TextInput:
+                id: sname
+                multiline:True
+                text: root.showtext()
+                pos_hint: {"x":0.1}
+                background_color: 0.3,0.4,0.5,1
+                size_hint:10, 20
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                id: email
+                multiline:False
+                pos_hint: {"x":0.1}
+                background_color: 0.3,0.4,0.5,1
+                size_hint:10, 20
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
+
+
+            pos_hint: {"x":0.1}
+            background_color: 0.3,0.4,0.5,1
+            size_hint:0.1, 0.1
+
+        Button:
+
+
+            on_press: root.label_change()

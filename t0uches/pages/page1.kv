@@ -1,0 +1,317 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    FourthWindow:
+    FifthWindow:
+    SixthWindow:
+    SeventhWindow:
+    EighthWindow:
+    NinthWindow:
+    TenthWindow:
+    EleventhWindow:
+    TwelvethWindow:
+    ThirthteenthhWindow:
+
+<MainWindow>
+    name: "main"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "password: "
+            TextInput:
+                id: passw
+                multiline: False
+        Button:
+            text: "enter"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "left"
+
+
+<SecondWindow>
+    name: "second"
+    sname: sname
+    email: email
+
+    Button:
+        text: "G0 Back"
+        size_hint: 1, 0.3
+        background_color: 0.9,0.3,0.5,1
+        on_release:
+            app.root.current = "fourth"
+            root.manager.transition.direction = "left"
+
+
+
+
+    Button:
+        pos_hint: { "x":0.11, "down":1}
+        size_hint: 0.1, 0.1
+        text: "11" if btn.state == "normal" else "Down"
+        background_color: 0.8,0.4,0.5,1
+
+
+
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+        pos: 10, 10
+
+        GridLayout:
+            cols:2
+
+
+            Label:
+                text:"Name: "
+
+            TextInput:
+                id: sname
+                multiline:True
+                text: root.showtext()
+                pos_hint: {"x":0.1}
+                background_color: 0.3,0.4,0.5,1
+                size_hint:10, 20
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                id: email
+                multiline:False
+                pos_hint: {"x":0.1}
+                background_color: 0.3,0.4,0.5,1
+                size_hint:10, 20
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
+
+
+            pos_hint: {"x":0.1}
+            background_color: 0.3,0.4,0.5,1
+            size_hint:0.1, 0.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Button:
+        pos_hint: { "x":1.01, "top":1}
+        size_hint: 0.1, 0.1
+        text: "11"
+        background_color: 0.1,0.2,0.5,1
+    Button:
+        pos_hint: { "x":0.91, "top":1}
+        size_hint: 0.1, 0.1
+        text: "10" if btn.state == "normal" else "Down"
+        background_color: 0.8,0.4,0.5,1
+    Button:
+        pos_hint: { "x":0.81, "top":1}
+        size_hint: 0.1, 0.1
+        text: "9"
+        background_color: 0.1,0.2,0.5,1
+    Button:
+        pos_hint: { "x":0.71, "top":1}
+        size_hint: 0.1, 0.1
+        text: "8" if btn.state == "normal" else "Down"
+        background_color: 0.8,0.4,0.5,1
+    Button:
+        pos_hint: { "x":0.61, "top":1}
+        size_hint: 0.1, 0.1
+        text: "7"
+        background_color: 0.1,0.2,0.5,1
+    Button:
+        pos_hint: { "x":0.51, "top":1}
+        size_hint: 0.1, 0.1
+        text: "6" if btn.state == "normal" else "Down"
+        background_color: 0.8,0.4,0.5,1
+    Button:
+        pos_hint: { "x":0.41, "top":1}
+        size_hint: 0.1, 0.1
+        text: "5"
+        background_color: 0.1,0.2,0.5,1
+
+
+    Button:
+        pos_hint: { "x":0.31, "top":1}
+        size_hint: 0.1, 0.1
+        text: "4" if btn.state == "normal" else "Down"
+        background_color: 0.8,0.4,0.5,1
+    Button:
+        pos_hint: { "x":0.21, "top":1}
+        size_hint: 0.1, 0.1
+        text: "3"
+        background_color: 0.1,0.2,0.5,1
+
+
+
+
+
+
+
+    Button:
+        id: btn
+        size_hint: 0.1, 0.1
+        pos_hint: { "x":0.01, "top":1}
+        text: "1" if btn.state == "normal" else "Down"
+        background_color: 0.1,0.4,0.5,1
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "left"
+    Button:
+
+        id: btn
+        size_hint: 0.1, 0.1
+        pos_hint: { "x":0.11, "top":1}
+
+        padding: 50, 40
+        spacing: 100
+
+        text: "2" if btn.state == "normal" else "Down"
+        background_color: 0.1,0.4,0.5,1
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "left"
+
+
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "yes: "
+            TextInput:
+                id: name
+                multiline: True
+
+
+        Button:
+            text: "G0 fr0nt"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text:"Submit"
+            on_press: root.btn()
+
+
+
+
+
+
+
+
+
+<FourthWindow>
+    name: "fourth"
+    GridLayout:
+        cols:3
+        GridLayout:
+            cols: 4
+
+            Label:
+                text: "4: "
+            TextInput:
+                id: pswd
+                multiline: False
+
+
+        Button:
+            text: "number 4"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "left"
+
+
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:3
+        GridLayout:
+            cols: 4
+
+            Label:
+                text: "yes: "
+            TextInput:
+                id: name
+                multiline: False
+
+
+        Button:
+            text: "G0 fr0nt"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:3
+        GridLayout:
+            cols: 4
+
+            Label:
+                text: "yes: "
+            TextInput:
+                id: name
+                multiline: False
+
+
+        Button:
+            text: "G0 fr0nt"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+
+
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:3
+        GridLayout:
+            cols: 4
+
+            Label:
+                text: "yes: "
+            TextInput:
+                id: name
+                multiline: False
+
+
+        Button:
+            text: "G0 fr0nt"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
